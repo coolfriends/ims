@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 gem 'dbf'
 gem 'sequel'
+gem 'pg'
 gem 'rubocop'
 gem 'pry'
 gem 'roda'
