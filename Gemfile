@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+gem 'dbf'
+gem 'sequel'
+gem 'rubocop'
+gem 'pry'
+gem 'roda'
+gem 'pgsql'
+gem 'sqlite3'
