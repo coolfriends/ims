@@ -4,10 +4,10 @@ Sequel.migration do
       column :vt_id, :integer
       column :vt_fullnam, :varchar, :size => 100
       column :vt_nodenam, :varchar, :size => 100
-      column :vt_x, :binary
-      column :vt_y, :binary
-      column :vt_width, :binary
-      column :vt_height, :binary
+      column :vt_x, :bytea
+      column :vt_y, :bytea
+      column :vt_width, :bytea
+      column :vt_height, :bytea
     end
   end
 end
