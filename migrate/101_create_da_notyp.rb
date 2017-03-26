@@ -9,7 +9,7 @@ Sequel.migration do
       column :nt_default, :varchar, :size => 1
       column :nt_protect, :boolean
       column :nt_last_lo, :varchar, :size => 10
-      column :nt_last_up, :datetime
+      column :nt_last_up, DateTime
     end
   end
 end

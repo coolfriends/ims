@@ -2,7 +2,7 @@ Sequel.migration do
   change do
      create_table(:emails) do
       column :em_id, :varchar, :size => 10
-      column :em_datecre, :datetime
+      column :em_datecre, DateTime
       column :em_fromnam, :varchar, :size => 40
       column :em_toname, :varchar, :size => 40
       column :em_subject, :varchar, :size => 250

@@ -99,7 +99,7 @@ Sequel.migration do
       column :iv_unit_bu, :float
       column :iv_unit_ot, :float
       column :iv_user_id, :varchar, :size => 5
-      column :iv_last_mo, :datetime
+      column :iv_last_mo, DateTime
       column :iv_stepup, :integer
       column :iv_web_thi, :float
       column :iv_lock_ba, :boolean

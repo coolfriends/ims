@@ -50,9 +50,9 @@ Sequel.migration do
       column :cc_eh_note, :text
       column :cc_notes, :text
       column :cc_created, :varchar, :size => 5
-      column :cc_create2, :datetime
+      column :cc_create2, DateTime
       column :cc_last_lo, :varchar, :size => 5
-      column :cc_last_up, :datetime
+      column :cc_last_up, DateTime
       column :cc_call_cy, :varchar, :size => 20
       column :cc_salutat, :varchar, :size => 15
       column :cc_supp_co, :varchar, :size => 6

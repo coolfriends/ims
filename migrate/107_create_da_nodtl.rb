@@ -11,7 +11,7 @@ Sequel.migration do
       column :nd_outcome, :varchar, :size => 35
       column :nd_outcom2, :text
       column :nd_last_lo, :varchar, :size => 10
-      column :nd_last_up, :datetime
+      column :nd_last_up, DateTime
     end
   end
 end

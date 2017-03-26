@@ -39,7 +39,7 @@ Sequel.migration do
       column :so_ship_ty, :varchar, :size => 1
       column :so_progres, :boolean
       column :so_user_id, :varchar, :size => 5
-      column :so_last_mo, :datetime
+      column :so_last_mo, DateTime
       column :so_st_id_1, :varchar, :size => 10
       column :so_st_id_2, :varchar, :size => 10
       column :so_stax_id, :varchar, :size => 25

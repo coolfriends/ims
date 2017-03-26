@@ -4,7 +4,7 @@ Sequel.migration do
       column :nk_id, :varchar, :size => 10
       column :nk_desc, :varchar, :size => 35
       column :nk_last_lo, :varchar, :size => 10
-      column :nk_last_up, :datetime
+      column :nk_last_up, DateTime
     end
   end
 end

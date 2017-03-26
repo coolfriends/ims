@@ -46,7 +46,7 @@ Sequel.migration do
       column :ap_deliver, :date
       column :ap_user_id, :varchar, :size => 5
       column :ap_lm_user, :varchar, :size => 5
-      column :ap_lm_date, :datetime
+      column :ap_lm_date, DateTime
       column :ap_cc_deta, :boolean
     end
   end

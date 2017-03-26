@@ -22,9 +22,9 @@ Sequel.migration do
       column :no_credit, :float
       column :no_text, :text
       column :no_created, :varchar, :size => 10
-      column :no_create2, :datetime
+      column :no_create2, DateTime
       column :no_last_lo, :varchar, :size => 10
-      column :no_last_up, :datetime
+      column :no_last_up, DateTime
       column :no_invent_, :varchar, :size => 30
       column :no_part_nu, :varchar, :size => 30
       column :no_sord_nu, :varchar, :size => 7

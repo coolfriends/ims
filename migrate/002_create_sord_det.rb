@@ -39,7 +39,7 @@ Sequel.migration do
       column :sd_comm_pe, :float
       column :sd_comm_am, :float
       column :sd_user_id, :varchar, :size => 5
-      column :sd_last_mo, :datetime
+      column :sd_last_mo, DateTime
       column :sd_unit_cu, :float
       column :sd_disc_cu, :float
       column :sd_ext_cur, :float

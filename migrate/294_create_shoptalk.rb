@@ -3,7 +3,7 @@ Sequel.migration do
      create_table(:shoptalk) do
       column :st_id, :varchar, :size => 10
       column :st_emp_id, :varchar, :size => 5
-      column :st_datetim, :datetime
+      column :st_datetim, DateTime
       column :st_order_n, :varchar, :size => 12
       column :st_invent_, :varchar, :size => 30
       column :st_cust_co, :varchar, :size => 6

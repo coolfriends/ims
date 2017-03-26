@@ -11,11 +11,11 @@ Sequel.migration do
       column :tr_schedby, :varchar, :size => 5
       column :tr_est_cos, :float
       column :tr_contact, :varchar, :size => 30
-      column :tr_appdate, :datetime
-      column :tr_actdate, :datetime
+      column :tr_appdate, DateTime
+      column :tr_actdate, DateTime
       column :tr_tarp, :boolean
-      column :tr_shiptim, :datetime
-      column :tr_bookedd, :datetime
+      column :tr_shiptim, DateTime
+      column :tr_bookedd, DateTime
       column :tr_cust_co, :varchar, :size => 6
       column :tr_type, :integer
       column :tr_partial, :boolean

@@ -30,7 +30,7 @@ Sequel.migration do
       column :io_ext_oth, :float
       column :io_order_n, :varchar, :size => 12
       column :io_order_2, :varchar, :size => 12
-      column :io_act_dat, :datetime
+      column :io_act_dat, DateTime
       column :io_user_id, :varchar, :size => 5
     end
   end

@@ -8,8 +8,8 @@ Sequel.migration do
       column :mr_sendto, :varchar, :size => 60
       column :mr_output, :varchar, :size => 15
       column :mr_notes, :text
-      column :mr_when_re, :datetime
-      column :mr_deadlin, :datetime
+      column :mr_when_re, DateTime
+      column :mr_deadlin, DateTime
     end
   end
 end

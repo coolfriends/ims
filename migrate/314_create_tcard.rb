@@ -104,7 +104,7 @@ Sequel.migration do
       column :tc_de_id14, :varchar, :size => 2
       column :tc_de_id15, :varchar, :size => 2
       column :tc_updt_us, :varchar, :size => 5
-      column :tc_updt_da, :datetime
+      column :tc_updt_da, DateTime
       column :tc_act1, :varchar, :size => 10
       column :tc_act2, :varchar, :size => 10
       column :tc_act3, :varchar, :size => 10

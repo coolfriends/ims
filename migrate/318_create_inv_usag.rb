@@ -40,7 +40,7 @@ Sequel.migration do
       column :iu_wp_id, :varchar, :size => 10
       column :iu_tag_num, :integer
       column :iu_user_id, :varchar, :size => 5
-      column :iu_transti, :datetime
+      column :iu_transti, DateTime
       column :iu_remwidt, :float
       column :iu_remleng, :float
       column :iu_remquan, :integer

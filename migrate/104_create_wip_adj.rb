@@ -13,7 +13,7 @@ Sequel.migration do
       column :wa_total, :float
       column :wa_quantit, :float
       column :wa_user_id, :varchar, :size => 5
-      column :wa_datetim, :datetime
+      column :wa_datetim, DateTime
     end
   end
 end

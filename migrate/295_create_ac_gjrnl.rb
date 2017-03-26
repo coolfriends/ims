@@ -12,7 +12,7 @@ Sequel.migration do
       column :gj_rev_dat, :date
       column :gj_out_of_, :boolean
       column :gj_user_id, :varchar, :size => 5
-      column :gj_last_mo, :datetime
+      column :gj_last_mo, DateTime
     end
   end
 end

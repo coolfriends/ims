@@ -136,8 +136,8 @@ Sequel.migration do
       column :ao_freight, :float
       column :ao_freigh2, :float
       column :ao_lotqty, :float
-      column :ao_infsta2, :datetime
-      column :ao_infend2, :datetime
+      column :ao_infsta2, DateTime
+      column :ao_infend2, DateTime
     end
   end
 end

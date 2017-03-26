@@ -202,7 +202,7 @@ Sequel.migration do
       column :em_1099, :boolean
       column :em_1099_box, :varchar, :size => 2
       column :em_lm_user, :varchar, :size => 5
-      column :em_lm_date, :datetime
+      column :em_lm_date, DateTime
       column :em_email_p, :boolean
       column :em_portalo, :boolean
       column :em_birth_2, :varchar, :size => 20

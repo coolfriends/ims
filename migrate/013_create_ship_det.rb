@@ -84,7 +84,7 @@ Sequel.migration do
       column :sd_heat_nu, :varchar, :size => 30
       column :sd_lot_num, :varchar, :size => 20
       column :sd_user_id, :varchar, :size => 5
-      column :sd_last_mo, :datetime
+      column :sd_last_mo, DateTime
       column :sd_dont_po, :boolean
       column :sd_cm_flag, :varchar, :size => 1
       column :sd_cm_num, :varchar, :size => 7

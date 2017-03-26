@@ -14,7 +14,7 @@ Sequel.migration do
       column :ij_protect, :boolean
       column :ij_lo_code, :varchar, :size => 10
       column :ij_user_id, :varchar, :size => 5
-      column :ij_last_mo, :datetime
+      column :ij_last_mo, DateTime
       column :ij_prod_co, :varchar, :size => 2
       column :ij_dist_co, :varchar, :size => 2
       column :ij_order_2, :varchar, :size => 12

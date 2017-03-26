@@ -60,7 +60,7 @@ Sequel.migration do
       column :mr_destina, :varchar, :size => 4
       column :mr_zero_ba, :boolean
       column :mr_lm_user, :varchar, :size => 5
-      column :mr_lm_date, :datetime
+      column :mr_lm_date, DateTime
     end
   end
 end

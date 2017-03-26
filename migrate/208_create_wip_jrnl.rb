@@ -19,7 +19,7 @@ Sequel.migration do
       column :wp_unit_bu, :float
       column :wp_unit_ma, :float
       column :wp_unit_ot, :float
-      column :wp_datetim, :datetime
+      column :wp_datetim, DateTime
       column :wp_prod_co, :varchar, :size => 2
       column :wp_dist_co, :varchar, :size => 2
       column :wp_unit_to, :float

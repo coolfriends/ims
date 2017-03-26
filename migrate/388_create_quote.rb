@@ -182,7 +182,7 @@ Sequel.migration do
       column :q1_op_las2, :date
       column :q1_doc_typ, :varchar, :size => 10
       column :q1_user_id, :varchar, :size => 5
-      column :q1_last_mo, :datetime
+      column :q1_last_mo, DateTime
       column :q1_cust_ph, :varchar, :size => 14
       column :q1_cust_fa, :varchar, :size => 14
       column :q1_proj_de, :varchar, :size => 50

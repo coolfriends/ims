@@ -9,7 +9,7 @@ Sequel.migration do
       column :va_box, :integer
       column :va_quantit, :float
       column :va_user_id, :varchar, :size => 5
-      column :va_datetim, :datetime
+      column :va_datetim, DateTime
       column :va_sord_nu, :varchar, :size => 7
     end
   end

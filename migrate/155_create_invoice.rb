@@ -74,7 +74,7 @@ Sequel.migration do
       column :in_nc_date, :date
       column :in_nc_mast, :boolean
       column :in_lm_user, :varchar, :size => 5
-      column :in_lm_date, :datetime
+      column :in_lm_date, DateTime
       column :in_ex_coll, :boolean
     end
   end

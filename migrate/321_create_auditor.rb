@@ -1,7 +1,7 @@
 Sequel.migration do
   change do
      create_table(:auditor) do
-      column :au_date_ti, :datetime
+      column :au_date_ti, DateTime
       column :au_user_id, :varchar, :size => 5
       column :au_screen_, :varchar, :size => 15
       column :au_table_i, :varchar, :size => 15

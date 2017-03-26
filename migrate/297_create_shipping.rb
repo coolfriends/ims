@@ -44,7 +44,7 @@ Sequel.migration do
       column :sh_residen, :boolean
       column :sh_hundred, :boolean
       column :sh_user_id, :varchar, :size => 5
-      column :sh_last_mo, :datetime
+      column :sh_last_mo, DateTime
       column :sh_prepay_, :integer
       column :sh_plist_p, :boolean
       column :sh_prem_fr, :float

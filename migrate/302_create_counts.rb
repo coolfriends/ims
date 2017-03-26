@@ -3,7 +3,7 @@ Sequel.migration do
      create_table(:counts) do
       column :co_id, :varchar, :size => 10
       column :co_aj_id, :varchar, :size => 10
-      column :co_date_ti, :datetime
+      column :co_date_ti, DateTime
       column :co_user, :varchar, :size => 5
       column :co_prod, :float
       column :co_review, :float

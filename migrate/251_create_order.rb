@@ -138,7 +138,7 @@ Sequel.migration do
       column :or_cont_we, :varchar, :size => 10
       column :or_aggrega, :boolean
       column :or_user_id, :varchar, :size => 5
-      column :or_last_mo, :datetime
+      column :or_last_mo, DateTime
       column :or_seriali, :boolean
       column :or_op_last, :varchar, :size => 30
       column :or_op_rev, :varchar, :size => 3
@@ -157,7 +157,7 @@ Sequel.migration do
       column :or_markup, :float
       column :or_labor_c, :boolean
       column :or_continu, :boolean
-      column :or_loctime, :datetime
+      column :or_loctime, DateTime
       column :or_sl_id, :varchar, :size => 10
       column :or_print_d, :date
       column :or_origina, :varchar, :size => 5

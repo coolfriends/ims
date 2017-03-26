@@ -59,7 +59,7 @@ Sequel.migration do
       column :mn_user_id, :varchar, :size => 5
       column :mn_exclude, :boolean
       column :mn_lm_user, :varchar, :size => 5
-      column :mn_lm_date, :datetime
+      column :mn_lm_date, DateTime
     end
   end
 end

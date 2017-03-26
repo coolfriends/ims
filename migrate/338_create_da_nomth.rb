@@ -6,7 +6,7 @@ Sequel.migration do
       column :nm_abbrev, :varchar, :size => 5
       column :nm_default, :varchar, :size => 1
       column :nm_last_lo, :varchar, :size => 10
-      column :nm_last_up, :datetime
+      column :nm_last_up, DateTime
     end
   end
 end

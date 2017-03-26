@@ -6,8 +6,8 @@ Sequel.migration do
       column :pt_rec_num, :integer
       column :pt_date, :date
       column :pt_userid, :varchar, :size => 5
-      column :pt_startti, :datetime
-      column :pt_endtime, :datetime
+      column :pt_startti, DateTime
+      column :pt_endtime, DateTime
       column :pt_timeela, :float
       column :pt_pr_rec_, :integer
       column :pt_id, :integer

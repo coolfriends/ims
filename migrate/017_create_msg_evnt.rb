@@ -11,7 +11,7 @@ Sequel.migration do
       column :me_refere5, :varchar, :size => 40
       column :me_owner, :varchar, :size => 5
       column :me_reportc, :text
-      column :me_timetor, :datetime
+      column :me_timetor, DateTime
       column :me_frequen, :varchar, :size => 1
       column :me_kiosk, :boolean
     end
