@@ -10,8 +10,11 @@ tables = ARGV
 tables = Dir['data/*.dbf'] if tables.empty?
 
 def fix_hash(h)
-  h['or_loctime'] = nil if h.key? 'or_loctime'
-  h['sd_last_mo'] = nil if h.key? 'sd_last_mo'
+  %w(me_timetor
+     or_loctime
+     sd_last_mo).each do |key|
+    h[key] = nil if h.key? key
+  end
 end
 
 tables.each do |table|
@@ -21,6 +24,7 @@ tables.each do |table|
   dbf.each do |row|
     puts "Loading row #{rows} of table #{table_name}"
     rows += 1
+    next if row.nil?
     row_hash = Hash[row.attributes.map { |k, v| [k.downcase, v] }]
     tries = 0
     begin
