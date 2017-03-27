@@ -4,11 +4,10 @@ require 'pry'
 require 'dbf'
 require 'sequel'
 require 'json'
-config = JSON.parse(File.read('config/test.json'), symbolize_names: true)
+require_relative '../db/init'
 
 tables = ARGV
 tables = Dir['data/*.dbf'] if tables.empty?
-DB = Sequel.postgres('ims', user: 'ims', password: config[:db_pass])
 
 def fix_hash(h)
   h['or_loctime'] = nil if h.key? 'or_loctime'

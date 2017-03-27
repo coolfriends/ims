@@ -1,3 +1,4 @@
 config/test.json
 data/
 db/
+Gemfile.lock
