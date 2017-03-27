@@ -1,0 +1,5 @@
+Metrics/BlockLength:
+  ExcludedMethods:
+    - create_table
+    - change
+    - migration

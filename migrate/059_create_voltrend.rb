@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:voltrend) do
-      column :vt_invent_, :varchar, :size => 30
+    create_table(:voltrend) do
+      column :vt_invent_, :varchar, size: 30
       column :vt_eau, :integer
       column :vt_aau, :integer
       column :vt_aau_52, :integer
@@ -38,7 +40,7 @@ Sequel.migration do
       column :vt_eff4, :float
       column :vt_est_set, :float
       column :vt_act_set, :float
-      column :vt_cust_co, :varchar, :size => 6
+      column :vt_cust_co, :varchar, size: 6
     end
   end
 end

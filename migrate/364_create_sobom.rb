@@ -1,28 +1,30 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:sobom) do
-      column :so_id, :varchar, :size => 10
-      column :sordnum, :varchar, :size => 7
+    create_table(:sobom) do
+      column :so_id, :varchar, size: 10
+      column :sordnum, :varchar, size: 7
       column :soforecast, :boolean
       column :linenum, :integer
       column :relnum, :integer
       column :clevel, :integer
-      column :clevel_lin, :varchar, :size => 2
+      column :clevel_lin, :varchar, size: 2
       column :bomnode, :integer
-      column :inventnum, :varchar, :size => 30
-      column :invent_typ, :varchar, :size => 5
-      column :partnum, :varchar, :size => 30
-      column :make_buy, :varchar, :size => 4
-      column :iv_supp_co, :varchar, :size => 6
-      column :iv_planner, :varchar, :size => 5
+      column :inventnum, :varchar, size: 30
+      column :invent_typ, :varchar, size: 5
+      column :partnum, :varchar, size: 30
+      column :make_buy, :varchar, size: 4
+      column :iv_supp_co, :varchar, size: 6
+      column :iv_planner, :varchar, size: 5
       column :exclfrommr, :boolean
-      column :purchunit, :varchar, :size => 2
-      column :calctype, :varchar, :size => 2
+      column :purchunit, :varchar, size: 2
+      column :calctype, :varchar, size: 2
       column :alloc, :boolean
-      column :iv_stock_u, :varchar, :size => 15
-      column :iv_purch_u, :varchar, :size => 15
+      column :iv_stock_u, :varchar, size: 15
+      column :iv_purch_u, :varchar, size: 15
       column :partcnt, :float
-      column :partdesc, :varchar, :size => 50
+      column :partdesc, :varchar, size: 50
       column :shipdate, :date
       column :duedate, :date
       column :promdate, :date
@@ -38,7 +40,7 @@ Sequel.migration do
       column :leadtime, :integer
       column :startdate, :date
       column :enddate, :date
-      column :parentp, :varchar, :size => 30
+      column :parentp, :varchar, size: 30
       column :level, :integer
       column :iv_date_1, :date
       column :iv_date_2, :date
@@ -220,7 +222,7 @@ Sequel.migration do
       column :iv_onord34, :float
       column :iv_onord35, :float
       column :iv_onord36, :float
-      column :so_po_num, :varchar, :size => 25
+      column :so_po_num, :varchar, size: 25
       column :ss_confirm, :boolean
     end
   end

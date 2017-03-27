@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:inv_chng) do
-      column :iy_id, :varchar, :size => 10
-      column :iy_invent_, :varchar, :size => 30
-      column :iy_year, :varchar, :size => 4
+    create_table(:inv_chng) do
+      column :iy_id, :varchar, size: 10
+      column :iy_invent_, :varchar, size: 30
+      column :iy_year, :varchar, size: 4
       column :iy_month_1, :float
       column :iy_month_2, :float
       column :iy_month_3, :float

@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:daystats) do
+    create_table(:daystats) do
       column :ds_sorders, :integer
       column :ds_orders, :integer
       column :ds_quotes, :integer
@@ -16,7 +18,7 @@ Sequel.migration do
       column :ds_invoic2, :float
       column :ds_return2, :float
       column :ds_date, :date
-      column :ds_period, :varchar, :size => 1
+      column :ds_period, :varchar, size: 1
     end
   end
 end

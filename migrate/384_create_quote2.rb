@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:quote2) do
-      column :q2_quote_n, :varchar, :size => 15
+    create_table(:quote2) do
+      column :q2_quote_n, :varchar, size: 15
       column :q2_lastop, :integer
       column :q2_tsu, :float
       column :q2_tmc, :float
@@ -182,18 +184,18 @@ Sequel.migration do
       column :q2_fenote, :text
       column :q2_mannote, :text
       column :q2_salespe, :float
-      column :q2_salesp2, :varchar, :size => 5
+      column :q2_salesp2, :varchar, size: 5
       column :q2_ht_note, :text
       column :q2_pl_note, :text
-      column :q2_no_quot, :varchar, :size => 1
-      column :q2_induct_, :varchar, :size => 1
-      column :q2_shard_s, :varchar, :size => 25
-      column :q2_toteff_, :varchar, :size => 1
-      column :q2_case_s, :varchar, :size => 10
-      column :q2_core_s, :varchar, :size => 10
-      column :q2_plen_s, :varchar, :size => 10
-      column :q2_note_s, :varchar, :size => 40
-      column :q2_inc_sub, :varchar, :size => 1
+      column :q2_no_quot, :varchar, size: 1
+      column :q2_induct_, :varchar, size: 1
+      column :q2_shard_s, :varchar, size: 25
+      column :q2_toteff_, :varchar, size: 1
+      column :q2_case_s, :varchar, size: 10
+      column :q2_core_s, :varchar, size: 10
+      column :q2_plen_s, :varchar, size: 10
+      column :q2_note_s, :varchar, size: 40
+      column :q2_inc_sub, :varchar, size: 1
       column :q2_misc_no, :text
       column :q2_overrid, :boolean
       column :q2_gtmat1, :float
@@ -207,13 +209,13 @@ Sequel.migration do
       column :q2_gtmat9, :float
       column :q2_gtmat10, :float
       column :q2_decimal, :integer
-      column :q2_app_by, :varchar, :size => 25
-      column :q2_ins_by, :varchar, :size => 25
-      column :q2_shard_i, :varchar, :size => 15
+      column :q2_app_by, :varchar, size: 25
+      column :q2_ins_by, :varchar, size: 25
+      column :q2_shard_i, :varchar, size: 15
       column :q2_note_i, :text
-      column :q2_lot, :varchar, :size => 20
-      column :q2_case_i, :varchar, :size => 10
-      column :q2_plen_i, :varchar, :size => 10
+      column :q2_lot, :varchar, size: 20
+      column :q2_case_i, :varchar, size: 10
+      column :q2_plen_i, :varchar, size: 10
       column :q2_matmu1, :integer
       column :q2_matmu2, :integer
       column :q2_matmu3, :integer
@@ -236,14 +238,14 @@ Sequel.migration do
       column :q2_cfcpu9, :float
       column :q2_cfcpu10, :float
       column :q2_excsetu, :boolean
-      column :q2_salesp3, :varchar, :size => 5
+      column :q2_salesp3, :varchar, size: 5
       column :q2_salesp4, :float
       column :q2_excmatl, :boolean
       column :q2_ptools, :float
       column :q2_inc_mis, :boolean
       column :q2_excplat, :boolean
       column :q2_gm, :boolean
-      column :q2_qtyuom, :varchar, :size => 4
+      column :q2_qtyuom, :varchar, size: 4
       column :q2_apr1, :float
       column :q2_apr2, :float
       column :q2_apr3, :float

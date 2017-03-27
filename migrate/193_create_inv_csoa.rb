@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:inv_csoa) do
-      column :io_id, :varchar, :size => 10
-      column :io_ie_id, :varchar, :size => 10
+    create_table(:inv_csoa) do
+      column :io_id, :varchar, size: 10
+      column :io_ie_id, :varchar, size: 10
       column :io_adj_dat, :date
       column :io_adj_uni, :float
       column :io_adj_ext, :float
@@ -10,8 +12,8 @@ Sequel.migration do
       column :io_org_ext, :float
       column :io_unit_co, :float
       column :io_ext_cos, :float
-      column :io_invent_, :varchar, :size => 30
-      column :io_type, :varchar, :size => 1
+      column :io_invent_, :varchar, size: 30
+      column :io_type, :varchar, size: 1
       column :io_adj_mat, :float
       column :io_adj_lab, :float
       column :io_adj_bur, :float
@@ -28,10 +30,10 @@ Sequel.migration do
       column :io_ext_lab, :float
       column :io_ext_bur, :float
       column :io_ext_oth, :float
-      column :io_order_n, :varchar, :size => 12
-      column :io_order_2, :varchar, :size => 12
+      column :io_order_n, :varchar, size: 12
+      column :io_order_2, :varchar, size: 12
       column :io_act_dat, DateTime
-      column :io_user_id, :varchar, :size => 5
+      column :io_user_id, :varchar, size: 5
     end
   end
 end

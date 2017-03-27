@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:operate) do
-      column :op_quote_n, :varchar, :size => 15
+    create_table(:operate) do
+      column :op_quote_n, :varchar, size: 15
       column :op_op_num, :integer
-      column :op_type, :varchar, :size => 1
-      column :op_mach_co, :varchar, :size => 5
+      column :op_type, :varchar, size: 1
+      column :op_mach_co, :varchar, size: 5
       column :op_suhr, :float
       column :op_sur, :float
       column :op_su, :float
@@ -18,8 +20,8 @@ Sequel.migration do
       column :op_current, :integer
       column :op_attend, :integer
       column :op_queue, :float
-      column :op_dist_co, :varchar, :size => 2
-      column :op_supp_co, :varchar, :size => 6
+      column :op_dist_co, :varchar, size: 2
+      column :op_supp_co, :varchar, size: 6
       column :op_unit_co, :float
       column :op_quantit, :integer
       column :op_ext_cos, :float
@@ -37,19 +39,19 @@ Sequel.migration do
       column :op_cost9, :float
       column :op_cost10, :float
       column :op_recalc, :boolean
-      column :op_in_inve, :varchar, :size => 30
-      column :op_out_inv, :varchar, :size => 30
+      column :op_in_inve, :varchar, size: 30
+      column :op_out_inv, :varchar, size: 30
       column :op_sched, :boolean
       column :op_force, :boolean
       column :op_rewflag, :boolean
       column :op_perc_co, :integer
-      column :op_g_code, :varchar, :size => 10
+      column :op_g_code, :varchar, size: 10
       column :op_move_st, :boolean
       column :op_master_, :integer
       column :op_parent_, :integer
       column :op_oplib_n, :text
-      column :op_il_id, :varchar, :size => 10
-      column :op_ib_id, :varchar, :size => 10
+      column :op_il_id, :varchar, size: 10
+      column :op_ib_id, :varchar, size: 10
       column :op_pagebre, :boolean
       column :op_min_cha, :float
       column :op_min_ch2, :float
@@ -216,17 +218,17 @@ Sequel.migration do
       column :op_setup_m, :boolean
       column :op_setup_c, :integer
       column :op_aggrega, :integer
-      column :op_invent_, :varchar, :size => 30
+      column :op_invent_, :varchar, size: 30
       column :op_last_pr, :boolean
       column :op_split, :boolean
-      column :op_il_id_i, :varchar, :size => 10
-      column :op_ib_id_i, :varchar, :size => 10
+      column :op_il_id_i, :varchar, size: 10
+      column :op_ib_id_i, :varchar, size: 10
       column :op_optype, :integer
       column :op_down, :integer
       column :op_pc_lbs, :boolean
       column :op_pc_cost, :float
-      column :op_aw_quot, :varchar, :size => 15
-      column :op_unit_ty, :varchar, :size => 4
+      column :op_aw_quot, :varchar, size: 15
+      column :op_unit_ty, :varchar, size: 4
       column :op_minqty, :integer
       column :op_hpp, :float
       column :op_mpp, :float
@@ -242,15 +244,15 @@ Sequel.migration do
       column :op_load_ti, :float
       column :op_rpm, :integer
       column :op_obsolet, :boolean
-      column :op_spindge, :varchar, :size => 15
-      column :op_changeg, :varchar, :size => 15
-      column :op_threadg, :varchar, :size => 15
-      column :op_st_id, :varchar, :size => 10
+      column :op_spindge, :varchar, size: 15
+      column :op_changeg, :varchar, size: 15
+      column :op_threadg, :varchar, size: 15
+      column :op_st_id, :varchar, size: 10
       column :op_signifi, :boolean
       column :op_post_pc, :boolean
       column :op_apw, :float
-      column :op_sa_id, :varchar, :size => 10
-      column :op_emp_id, :varchar, :size => 5
+      column :op_sa_id, :varchar, size: 10
+      column :op_emp_id, :varchar, size: 5
       column :op_spindle, :integer
       column :op_feed_rp, :integer
       column :op_eff_thr, :integer

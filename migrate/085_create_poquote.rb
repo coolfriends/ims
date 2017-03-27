@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:poquote) do
+    create_table(:poquote) do
       column :pq_seq, :integer
-      column :pq_quote_n, :varchar, :size => 15
-      column :pq_desc, :varchar, :size => 50
+      column :pq_quote_n, :varchar, size: 15
+      column :pq_desc, :varchar, size: 50
     end
   end
 end

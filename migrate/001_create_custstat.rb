@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:custstat) do
-      column :cs_cust_co, :varchar, :size => 6
+    create_table(:custstat) do
+      column :cs_cust_co, :varchar, size: 6
       column :cs_freqofs, :integer
       column :cs_datelas, :date
       column :cs_yearhig, :float
@@ -15,7 +17,7 @@ Sequel.migration do
       column :cs_opencre, :float
       column :cs_totpend, :float
       column :cs_availcr, :float
-      column :cs_credith, :varchar, :size => 30
+      column :cs_credith, :varchar, size: 30
       column :cs_currbal, :float
     end
   end

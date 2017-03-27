@@ -1,21 +1,23 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:deftime) do
-      column :s1_ci, :varchar, :size => 10
-      column :s1_co, :varchar, :size => 10
-      column :s1_lo, :varchar, :size => 10
-      column :s1_li, :varchar, :size => 10
-      column :s2_ci, :varchar, :size => 10
-      column :s2_co, :varchar, :size => 10
-      column :s2_lo, :varchar, :size => 10
-      column :s2_li, :varchar, :size => 10
-      column :s3_ci, :varchar, :size => 10
-      column :s3_co, :varchar, :size => 10
-      column :s3_lo, :varchar, :size => 10
-      column :s3_li, :varchar, :size => 10
+    create_table(:deftime) do
+      column :s1_ci, :varchar, size: 10
+      column :s1_co, :varchar, size: 10
+      column :s1_lo, :varchar, size: 10
+      column :s1_li, :varchar, size: 10
+      column :s2_ci, :varchar, size: 10
+      column :s2_co, :varchar, size: 10
+      column :s2_lo, :varchar, size: 10
+      column :s2_li, :varchar, size: 10
+      column :s3_ci, :varchar, size: 10
+      column :s3_co, :varchar, size: 10
+      column :s3_lo, :varchar, size: 10
+      column :s3_li, :varchar, size: 10
       column :r_limit, :integer
-      column :jc_use, :varchar, :size => 1
-      column :tc_use, :varchar, :size => 1
+      column :jc_use, :varchar, size: 1
+      column :tc_use, :varchar, size: 1
       column :minlunch, :integer
       column :animatetc, :boolean
       column :s_flag, :boolean
@@ -55,12 +57,12 @@ Sequel.migration do
       column :ot_hours_a, :float
       column :le_leaves_, :integer
       column :manual_jc, :boolean
-      column :timeserver, :varchar, :size => 30
+      column :timeserver, :varchar, size: 30
       column :bypassmatr, :boolean
       column :close_on_l, :boolean
       column :mon_refres, :integer
-      column :wp_export_, :varchar, :size => 12
-      column :wp_export2, :varchar, :size => 40
+      column :wp_export_, :varchar, size: 12
+      column :wp_export2, :varchar, size: 40
       column :remain_in_, :boolean
       column :le_use_no_, :boolean
       column :use_timecl, :boolean

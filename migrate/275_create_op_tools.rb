@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:op_tools) do
-      column :ot_quote_n, :varchar, :size => 15
+    create_table(:op_tools) do
+      column :ot_quote_n, :varchar, size: 15
       column :ot_op_num, :integer
       column :ot_tool_nu, :integer
-      column :ot_mach_ca, :varchar, :size => 5
-      column :ot_tool_ty, :varchar, :size => 20
+      column :ot_mach_ca, :varchar, size: 5
+      column :ot_tool_ty, :varchar, size: 20
       column :ot_speed, :float
       column :ot_sp_adj, :integer
       column :ot_adj_spe, :float
@@ -23,9 +25,9 @@ Sequel.migration do
       column :ot_tool_di, :float
       column :ot_num_flu, :integer
       column :ot_const_v, :float
-      column :ot_mat_cod, :varchar, :size => 6
+      column :ot_mat_cod, :varchar, size: 6
       column :ot_quantit, :integer
-      column :ot_desc, :varchar, :size => 50
+      column :ot_desc, :varchar, size: 50
       column :ot_positio, :integer
       column :ot_endside, :integer
       column :ot_unit_co, :float

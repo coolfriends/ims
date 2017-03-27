@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:partscrap) do
+    create_table(:partscrap) do
       column :psc_id, :integer
-      column :invent_num, :varchar, :size => 30
-      column :invent_des, :varchar, :size => 50
-      column :cust_code, :varchar, :size => 6
+      column :invent_num, :varchar, size: 30
+      column :invent_des, :varchar, size: 50
+      column :cust_code, :varchar, size: 6
       column :numsu52, :integer
       column :numsuem, :integer
       column :numsuq, :integer

@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 gem 'dbf'
-gem 'sequel'
 gem 'pg'
-gem 'rubocop'
+gem 'pgsql'
 gem 'pry'
 gem 'roda'
-gem 'pgsql'
+gem 'rubocop'
+gem 'sequel'
 gem 'sqlite3'

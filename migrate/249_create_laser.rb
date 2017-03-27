@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:laser) do
-      column :lz_id, :varchar, :size => 10
-      column :lz_mat_cod, :varchar, :size => 3
+    create_table(:laser) do
+      column :lz_id, :varchar, size: 10
+      column :lz_mat_cod, :varchar, size: 3
       column :lz_mat_thk, :float
       column :lz_lg_cont, :float
       column :lz_md_cont, :float

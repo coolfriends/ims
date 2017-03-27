@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:thdwire) do
-      column :tw_threads, :varchar, :size => 10
+    create_table(:thdwire) do
+      column :tw_threads, :varchar, size: 10
       column :tw_wire_mm, :float
       column :tw_wire_in, :float
       column :tw_correct, :float

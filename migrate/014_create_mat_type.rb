@@ -1,25 +1,27 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:mat_type) do
-      column :ma_mat_cod, :varchar, :size => 6
-      column :ma_mat_nam, :varchar, :size => 30
+    create_table(:mat_type) do
+      column :ma_mat_cod, :varchar, size: 6
+      column :ma_mat_nam, :varchar, size: 30
       column :ma_conv_fa, :float
       column :ma_sfm, :float
       column :ma_alloy_c, :float
       column :ma_resin, :boolean
       column :ma_cpg, :float
       column :ma_bo_time, :float
-      column :ma_mix_tem, :varchar, :size => 3
+      column :ma_mix_tem, :varchar, size: 3
       column :ma_mix_tim, :float
-      column :ma_resin_t, :varchar, :size => 3
-      column :ma_cat_tem, :varchar, :size => 3
+      column :ma_resin_t, :varchar, size: 3
+      column :ma_cat_tem, :varchar, size: 3
       column :ma_cure_ti, :integer
-      column :ma_cure_te, :varchar, :size => 3
-      column :ma_pail_si, :varchar, :size => 20
+      column :ma_cure_te, :varchar, size: 3
+      column :ma_pail_si, :varchar, size: 20
       column :ma_pails_p, :integer
-      column :ma_duro, :varchar, :size => 3
-      column :ma_duro_lo, :varchar, :size => 3
-      column :ma_duro_hi, :varchar, :size => 3
+      column :ma_duro, :varchar, size: 3
+      column :ma_duro_lo, :varchar, size: 3
+      column :ma_duro_hi, :varchar, size: 3
       column :ma_rgb, :integer
       column :mt_c_min, :float
       column :mt_c_max, :float
@@ -64,8 +66,8 @@ Sequel.migration do
       column :mt_zn_min, :float
       column :mt_zn_max, :float
       column :mt_hide, :boolean
-      column :ma_specifi, :varchar, :size => 30
-      column :ma_grade, :varchar, :size => 6
+      column :ma_specifi, :varchar, size: 30
+      column :ma_grade, :varchar, size: 6
     end
   end
 end

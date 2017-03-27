@@ -1,24 +1,26 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:py_rgstr) do
-      column :rg_id, :varchar, :size => 10
+    create_table(:py_rgstr) do
+      column :rg_id, :varchar, size: 10
       column :rg_number, :integer
-      column :rg_type, :varchar, :size => 1
-      column :rg_emp_id, :varchar, :size => 5
-      column :rg_tax_id, :varchar, :size => 10
+      column :rg_type, :varchar, size: 1
+      column :rg_emp_id, :varchar, size: 5
+      column :rg_tax_id, :varchar, size: 10
       column :rg_begin_d, :date
       column :rg_end_dat, :date
       column :rg_entry_d, :date
-      column :rg_referen, :varchar, :size => 35
-      column :rg_payee, :varchar, :size => 35
+      column :rg_referen, :varchar, size: 35
+      column :rg_payee, :varchar, size: 35
       column :rg_address, :text
-      column :rg_pay_typ, :varchar, :size => 1
-      column :rg_pay_fre, :varchar, :size => 1
+      column :rg_pay_typ, :varchar, size: 1
+      column :rg_pay_fre, :varchar, size: 1
       column :rg_use_tca, :boolean
-      column :rg_filing_, :varchar, :size => 1
-      column :rg_filing2, :varchar, :size => 1
-      column :rg_filing3, :varchar, :size => 1
-      column :rg_filing4, :varchar, :size => 1
+      column :rg_filing_, :varchar, size: 1
+      column :rg_filing2, :varchar, size: 1
+      column :rg_filing3, :varchar, size: 1
+      column :rg_filing4, :varchar, size: 1
       column :rg_exempts, :integer
       column :rg_exempt2, :integer
       column :rg_exempt3, :integer
@@ -27,32 +29,32 @@ Sequel.migration do
       column :rg_as_medi, :boolean
       column :rg_as_futa, :boolean
       column :rg_as_suta, :boolean
-      column :rg_st_id_s, :varchar, :size => 2
-      column :rg_st_id_l, :varchar, :size => 2
-      column :rg_st_id_2, :varchar, :size => 2
-      column :rg_tx_id_f, :varchar, :size => 10
-      column :rg_tx_id_2, :varchar, :size => 10
-      column :rg_tx_id_m, :varchar, :size => 10
-      column :rg_tx_id_3, :varchar, :size => 10
-      column :rg_tx_id_s, :varchar, :size => 10
-      column :rg_tx_id_4, :varchar, :size => 10
-      column :rg_tx_id_5, :varchar, :size => 10
-      column :rg_tt_id_s, :varchar, :size => 10
-      column :rg_tx_id_l, :varchar, :size => 10
-      column :rg_tx_id_6, :varchar, :size => 10
+      column :rg_st_id_s, :varchar, size: 2
+      column :rg_st_id_l, :varchar, size: 2
+      column :rg_st_id_2, :varchar, size: 2
+      column :rg_tx_id_f, :varchar, size: 10
+      column :rg_tx_id_2, :varchar, size: 10
+      column :rg_tx_id_m, :varchar, size: 10
+      column :rg_tx_id_3, :varchar, size: 10
+      column :rg_tx_id_s, :varchar, size: 10
+      column :rg_tx_id_4, :varchar, size: 10
+      column :rg_tx_id_5, :varchar, size: 10
+      column :rg_tt_id_s, :varchar, size: 10
+      column :rg_tx_id_l, :varchar, size: 10
+      column :rg_tx_id_6, :varchar, size: 10
       column :rg_ad_tax_, :float
       column :rg_ad_tax2, :float
       column :rg_ad_tax3, :float
       column :rg_ad_tax4, :float
-      column :rg_vac_bas, :varchar, :size => 1
-      column :rg_vac_acc, :varchar, :size => 1
+      column :rg_vac_bas, :varchar, size: 1
+      column :rg_vac_acc, :varchar, size: 1
       column :rg_vac_ann, :float
       column :rg_vac_ava, :float
       column :rg_vac_ac2, :float
       column :rg_vac_use, :float
       column :rg_vac_rem, :float
-      column :rg_pto_bas, :varchar, :size => 1
-      column :rg_pto_acc, :varchar, :size => 1
+      column :rg_pto_bas, :varchar, size: 1
+      column :rg_pto_acc, :varchar, size: 1
       column :rg_pto_ann, :float
       column :rg_pto_ava, :float
       column :rg_pto_ac2, :float
@@ -112,28 +114,28 @@ Sequel.migration do
       column :rg_er_sit2, :float
       column :rg_er_lit3, :float
       column :rg_er_lit4, :float
-      column :rg_fit_py_, :varchar, :size => 12
-      column :rg_fica_py, :varchar, :size => 12
-      column :rg_fica_ex, :varchar, :size => 12
-      column :rg_mc_py_g, :varchar, :size => 12
-      column :rg_mc_ex_g, :varchar, :size => 12
-      column :rg_futa_py, :varchar, :size => 12
-      column :rg_futa_ex, :varchar, :size => 12
-      column :rg_suta_py, :varchar, :size => 12
-      column :rg_suta_ex, :varchar, :size => 12
-      column :rg_sii_py_, :varchar, :size => 12
-      column :rg_sii_ex_, :varchar, :size => 12
-      column :rg_sit_py_, :varchar, :size => 12
-      column :rg_sit_ex_, :varchar, :size => 12
-      column :rg_lit1_py, :varchar, :size => 12
-      column :rg_lit1_ex, :varchar, :size => 12
-      column :rg_lit2_py, :varchar, :size => 12
-      column :rg_lit2_ex, :varchar, :size => 12
-      column :rg_mn_id, :varchar, :size => 10
+      column :rg_fit_py_, :varchar, size: 12
+      column :rg_fica_py, :varchar, size: 12
+      column :rg_fica_ex, :varchar, size: 12
+      column :rg_mc_py_g, :varchar, size: 12
+      column :rg_mc_ex_g, :varchar, size: 12
+      column :rg_futa_py, :varchar, size: 12
+      column :rg_futa_ex, :varchar, size: 12
+      column :rg_suta_py, :varchar, size: 12
+      column :rg_suta_ex, :varchar, size: 12
+      column :rg_sii_py_, :varchar, size: 12
+      column :rg_sii_ex_, :varchar, size: 12
+      column :rg_sit_py_, :varchar, size: 12
+      column :rg_sit_ex_, :varchar, size: 12
+      column :rg_lit1_py, :varchar, size: 12
+      column :rg_lit1_ex, :varchar, size: 12
+      column :rg_lit2_py, :varchar, size: 12
+      column :rg_lit2_ex, :varchar, size: 12
+      column :rg_mn_id, :varchar, size: 10
       column :rg_or_calc, :boolean
       column :rg_or_vac_, :boolean
       column :rg_base_pa, :float
-      column :rg_cknum, :varchar, :size => 10
+      column :rg_cknum, :varchar, size: 10
       column :rg_ckdate, :date
       column :rg_electro, :boolean
       column :rg_ex_pay_, :boolean
@@ -175,40 +177,40 @@ Sequel.migration do
       column :rg_er_lit5, :float
       column :rg_er_lit6, :float
       column :rg_ee_sut3, :float
-      column :rg_filing5, :varchar, :size => 1
-      column :rg_eic_rc_, :varchar, :size => 12
-      column :rg_tx_id_e, :varchar, :size => 10
+      column :rg_filing5, :varchar, size: 1
+      column :rg_eic_rc_, :varchar, size: 12
+      column :rg_tx_id_e, :varchar, size: 10
       column :rg_er_eic_, :float
       column :rg_er_eic2, :float
       column :rg_er_eic3, :float
-      column :rg_check_m, :varchar, :size => 30
+      column :rg_check_m, :varchar, size: 30
       column :rg_as_soth, :boolean
-      column :rg_tx_id_7, :varchar, :size => 10
+      column :rg_tx_id_7, :varchar, size: 10
       column :rg_ee_sot_, :float
       column :rg_er_sot_, :float
       column :rg_ee_sot2, :float
       column :rg_er_sot2, :float
-      column :rg_sot_py_, :varchar, :size => 12
-      column :rg_sot_ex_, :varchar, :size => 12
+      column :rg_sot_py_, :varchar, size: 12
+      column :rg_sot_ex_, :varchar, size: 12
       column :rg_ee_sot3, :float
       column :rg_er_sot3, :float
-      column :rg_filing6, :varchar, :size => 1
+      column :rg_filing6, :varchar, size: 1
       column :rg_federal, :boolean
       column :rg_state_1, :boolean
       column :rg_local_1, :boolean
       column :rg_local_2, :boolean
-      column :rg_lc_id_l, :varchar, :size => 10
-      column :rg_lc_id_2, :varchar, :size => 10
+      column :rg_lc_id_l, :varchar, size: 10
+      column :rg_lc_id_2, :varchar, size: 10
       column :rg_as_loth, :boolean
       column :rg_as_lot2, :boolean
-      column :rg_lot1_py, :varchar, :size => 12
-      column :rg_lot1_ex, :varchar, :size => 12
-      column :rg_lot2_py, :varchar, :size => 12
-      column :rg_lot2_ex, :varchar, :size => 12
+      column :rg_lot1_py, :varchar, size: 12
+      column :rg_lot1_ex, :varchar, size: 12
+      column :rg_lot2_py, :varchar, size: 12
+      column :rg_lot2_ex, :varchar, size: 12
       column :rg_ee_tax_, :float
       column :rg_er_tax_, :float
-      column :rg_srt_py_, :varchar, :size => 12
-      column :rg_srt_ex_, :varchar, :size => 12
+      column :rg_srt_py_, :varchar, size: 12
+      column :rg_srt_ex_, :varchar, size: 12
       column :rg_depends, :integer
       column :rg_edep_da, :date
     end

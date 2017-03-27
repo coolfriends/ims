@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:execsum) do
+    create_table(:execsum) do
       column :es_ar_agin, :float
       column :es_ar_agi2, :float
       column :es_ar_agi3, :float
@@ -69,7 +71,7 @@ Sequel.migration do
       column :es_py_3, :float
       column :es_ca_3, :float
       column :es_asof_da, :date
-      column :es_type, :varchar, :size => 1
+      column :es_type, :varchar, size: 1
       column :es_ca_tota, :float
     end
   end

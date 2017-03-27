@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'json'
 require 'sequel'
 config = JSON.parse(File.read('config/test.json'), symbolize_names: true)

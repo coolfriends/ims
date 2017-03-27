@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:vupdate) do
+    create_table(:vupdate) do
       column :up_bom_quo, :date
       column :del_jcbatc, :boolean
       column :doc_man_et, :boolean

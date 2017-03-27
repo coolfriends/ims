@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:ac_glrpt) do
-      column :gr_id, :varchar, :size => 10
-      column :gr_code, :varchar, :size => 10
-      column :gr_name, :varchar, :size => 80
-      column :gr_type, :varchar, :size => 1
-      column :gr_title, :varchar, :size => 80
+    create_table(:ac_glrpt) do
+      column :gr_id, :varchar, size: 10
+      column :gr_code, :varchar, size: 10
+      column :gr_name, :varchar, size: 80
+      column :gr_type, :varchar, size: 1
+      column :gr_title, :varchar, size: 80
       column :gr_name_ti, :boolean
       column :gr_title_t, :boolean
       column :gr_title_n, :boolean
@@ -47,11 +49,11 @@ Sequel.migration do
       column :gr_acct_he, :boolean
       column :gr_acct_de, :boolean
       column :gr_acct_di, :boolean
-      column :gr_acct_dv, :varchar, :size => 2
-      column :gr_acct_dp, :varchar, :size => 2
+      column :gr_acct_dv, :varchar, size: 2
+      column :gr_acct_dp, :varchar, size: 2
       column :gr_acct_se, :boolean
       column :gr_acct_s2, :integer
-      column :gr_acct_s3, :varchar, :size => 2
+      column :gr_acct_s3, :varchar, size: 2
       column :gr_acct_d2, :boolean
       column :gr_acct_d3, :boolean
       column :gr_round_d, :boolean

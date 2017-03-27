@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:mattime) do
-      column :mt_quote_n, :varchar, :size => 15
-      column :mt_order_n, :varchar, :size => 12
+    create_table(:mattime) do
+      column :mt_quote_n, :varchar, size: 15
+      column :mt_order_n, :varchar, size: 12
       column :mt_item, :integer
       column :mt_cut_qty, :float
       column :mt_fit_qty, :float

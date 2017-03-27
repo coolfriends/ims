@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
-     create_table(:def_cal) do
+    create_table(:def_cal) do
       column :dc_m1, :float
       column :dc_m2, :float
       column :dc_m3, :float
