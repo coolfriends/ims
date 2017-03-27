@@ -11,6 +11,7 @@ tables = Dir['data/*.dbf'] if tables.empty?
 
 def fix_hash(h)
   %w(me_timetor
+     ij_last_mo
      or_loctime
      sd_last_mo).each do |key|
     h[key] = nil if h.key? key
