@@ -26,6 +26,10 @@ def fix_hash(h) # rubocop:disable Metrics/MethodLength
   end
   %w(cc_email1d
      cc_email2d
+     sc_2nd_tin
+     sc_409a_de
+     sc_409a_in
+     ca_2d_barc
      cc_email3d).each do |key|
     if h.key? key
       h[key.sub(/(\d)(\w)$/, '\1_\2')] = h[key]
