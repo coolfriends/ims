@@ -12,6 +12,7 @@ tables = Dir['data/*.dbf'] if tables.empty?
 def fix_hash(h) # rubocop:disable Metrics/MethodLength
   %w(me_timetor
      mr_lm_date
+     cc_call_cy
      ao_infsta2
      ap_lm_date
      ao_infend2
@@ -23,7 +24,7 @@ def fix_hash(h) # rubocop:disable Metrics/MethodLength
   %w(cc_email1d
      cc_email2d
      cc_email3d).each do |key|
-    if h.key?
+    if h.key? key
       h[key.sub(/(\d)(\w)$/, '\1_\2')] = h[key]
       h.delete(key)
     end
