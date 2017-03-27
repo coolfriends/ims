@@ -11,6 +11,7 @@ tables = Dir['data/*.dbf'] if tables.empty?
 
 def fix_hash(h)
   h['or_loctime'] = nil if h.key? 'or_loctime'
+  h['sd_last_mo'] = nil if h.key? 'sd_last_mo'
 end
 
 tables.each do |table|
@@ -28,7 +29,8 @@ tables.each do |table|
       fix_hash row_hash
       tries += 1
       retry if tries < 2
-      stdout.puts $ERROR_INFO
+      $stderr.puts $ERROR_INFO
+      binding.pry # rubocop:disable Lint/Debugger
     end
   end
 end
