@@ -9,7 +9,7 @@ require_relative '../db/init'
 tables = ARGV
 tables = Dir['data/*.dbf'] if tables.empty?
 
-def fix_hash(h)
+def fix_hash(h) # rubocop:disable Metrics/MethodLength
   %w(me_timetor
      mr_lm_date
      ao_infsta2
@@ -20,6 +20,14 @@ def fix_hash(h)
      sd_last_mo).each do |key|
     h[key] = nil if h.key? key
   end
+  %w(cc_email1d
+     cc_email2d
+     cc_email3d).each do |key|
+    if h.key?
+      h[key.sub(/(\d)(\w)$/, '\1_\2')] = h[key]
+      h.delete(key)
+    end
+  end
 end
 
 tables.each do |table|
@@ -27,7 +35,7 @@ tables.each do |table|
   dbf = DBF::Table.new(table)
   rows = 1
   dbf.each do |row|
-    puts "Loading row #{rows} of table #{table_name}" if rows % 100 == 0
+    puts "Loading row #{rows} of table #{table_name}" if (rows % 100).zero?
     rows += 1
     next if row.nil?
     row_hash = Hash[row.attributes.map { |k, v| [k.downcase, v] }]
