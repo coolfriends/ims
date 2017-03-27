@@ -28,6 +28,7 @@ def fix_hash(h) # rubocop:disable Metrics/MethodLength
      cc_email2d
      sc_2nd_tin
      sc_409a_de
+     w2_3rd_sic
      sc_409a_in
      ca_2d_barc
      cc_email3d).each do |key|
