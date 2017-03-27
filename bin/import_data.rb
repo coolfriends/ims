@@ -13,6 +13,7 @@ tables = Dir['data/*.dbf'] if tables.empty?
 def fix_hash(h) # rubocop:disable Metrics/MethodLength
   %w(me_timetor
      mr_lm_date
+     in_lm_date
      cc_call_cy
      cc_last_up
      ao_infsta2
