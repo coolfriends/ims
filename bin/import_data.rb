@@ -27,6 +27,7 @@ def fix_hash(h) # rubocop:disable Metrics/MethodLength
   %w(cc_email1d
      cc_email2d
      sc_2nd_tin
+     mn_1099box
      w3_501c_no
      sc_409a_de
      w2_3rd_sic
