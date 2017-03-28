@@ -13,6 +13,7 @@ tables = Dir['data/*.dbf'].sort { |a, b| File.basename(a) <=> File.basename(b) }
 def fix_hash(h) # rubocop:disable Metrics/MethodLength
   %w(me_timetor
      mr_lm_date
+     em_lm_date
      mn_lm_date
      gj_last_mo
      in_lm_date
@@ -28,6 +29,9 @@ def fix_hash(h) # rubocop:disable Metrics/MethodLength
   end
   %w(cc_email1d
      cc_email2d
+     em_1099box
+     em_w2_3rd_
+     use_1x2_bi
      sc_2nd_tin
      mn_1099box
      w3_501c_no
