@@ -8,7 +8,7 @@ require 'json'
 require_relative '../db/init'
 
 tables = ARGV
-tables = Dir['data/*.dbf'] if tables.empty?
+tables = Dir['data/*.dbf'].sort { |a, b| File.basename(a) <=> File.basename(b) } if tables.empty? # rubocop:disable Metrics/LineLength
 
 def fix_hash(h) # rubocop:disable Metrics/MethodLength
   %w(me_timetor
