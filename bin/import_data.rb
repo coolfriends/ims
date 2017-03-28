@@ -15,6 +15,7 @@ def fix_hash(h) # rubocop:disable Metrics/MethodLength
      mr_lm_date
      em_lm_date
      iu_transti
+     iv_last_mo
      io_act_dat
      mn_lm_date
      gj_last_mo
