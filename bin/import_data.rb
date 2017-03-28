@@ -14,6 +14,8 @@ def fix_hash(h) # rubocop:disable Metrics/MethodLength
   %w(me_timetor
      mr_lm_date
      em_lm_date
+     mr_when_re
+     mr_deadlin
      iu_transti
      iv_last_mo
      io_act_dat
