@@ -33,6 +33,7 @@ def fix_hash(h) # rubocop:disable Metrics/MethodLength
     h[key] = nil if h.key? key
   end
   %w(cc_email1d
+     w3_501c_n2
      cc_email2d
      em_1099box
      em_w2_3rd_
