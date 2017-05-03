@@ -16,7 +16,7 @@ ruby bin/migrations.rb
 ### Fix the created migrations
 ```
 sed -i -e 's/:datetime$/DateTime/' migrate/*.rb
-sed -i -e 's/:binary$/:bytea/' migrate/360_create_vshop.rb
+sed -i -e 's/:binary$/:bytea/' migrate/*.rb
 ```
 
 ### Migrate the schema
