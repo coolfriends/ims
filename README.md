@@ -11,7 +11,9 @@ sudo su - postgres
 createdb -O ims ims
 ```
 ### Create the db schema migrations (table data must exist in data/\*.dbf)
+```
 ruby bin/migrations.rb
+```
 
 ### Fix the created migrations
 ```
@@ -27,6 +29,11 @@ sequel -m ./migrate postgres://ims:<password>@localhost/ims
 ### Import the data (TODO)
 ```
 ruby bin/import_data.rb
+```
+
+### Generate new models.py
+```
+python manage.py inspectdb > reports/models.py
 ```
 
 
