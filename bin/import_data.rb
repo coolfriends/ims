@@ -32,6 +32,7 @@ def fix_hash(h) # rubocop:disable Metrics/MethodLength
      ao_infend2
      ij_last_mo
      or_loctime
+     or_last_mo
      sd_last_mo).each do |key|
     h[key] = nil if h.key? key
   end
@@ -51,6 +52,7 @@ def fix_hash(h) # rubocop:disable Metrics/MethodLength
      sp_1099box
      sc_409a_in
      ca_2d_barc
+     wt_o2burde
      cc_email3d).each do |key|
     if h.key? key
       h[key.sub(/(\d)(\w)$/, '\1_\2')] = h[key]
