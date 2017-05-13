@@ -5267,7 +5267,7 @@ class Inventor(models.Model):
 
 
 class Invoice(models.Model):
-    in_inv_num = models.CharField(max_length=7, blank=True, null=True)
+    in_inv_num = models.CharField(max_length=7, blank=True, primary_key=True)
     in_inv_typ = models.CharField(max_length=1, blank=True, null=True)
     in_inv_dat = models.DateField(blank=True, null=True)
     in_cust_co = models.CharField(max_length=6, blank=True, null=True)
@@ -5585,7 +5585,7 @@ class Jcardman(models.Model):
 
 
 class Jcmobdet(models.Model):
-    id = models.CharField(max_length=10, blank=True, null=True)
+    id = models.CharField(max_length=10, blank=True, primary_key=True)
     jm_id = models.CharField(max_length=10, blank=True, null=True)
     timecat = models.CharField(max_length=2, blank=True, null=True)
     datetime = models.DateTimeField(blank=True, null=True)
@@ -10906,7 +10906,7 @@ class Sopicked(models.Model):
 
 
 class Sord(models.Model):
-    so_sord_nu = models.CharField(max_length=7, blank=True, null=True)
+    so_sord_nu = models.CharField(max_length=7, blank=True, primary_key=True)
     so_inv_num = models.CharField(max_length=7, blank=True, null=True)
     so_inv_dat = models.DateField(blank=True, null=True)
     so_cust_co = models.CharField(max_length=6, blank=True, null=True)
