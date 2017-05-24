@@ -14,9 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from .views import sales_invoice_order_report_static
-
+from .views import sales_invoice_order_report
 
 urlpatterns = [
-    url(r'^', sales_invoice_order_report_static)
+    url(r'^sales_invoice_order_report/(?P<pk>[0-9]+)', sales_invoice_order_report),
 ]

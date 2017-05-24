@@ -26,23 +26,23 @@ sed -i -e 's/:binary$/:bytea/' migrate/*.rb
 sequel -m ./migrate postgres://ims:<password>@localhost/ims
 ```
 
-### Import the data (TODO)
+### Import the data
 ```
 ruby bin/import_data.rb
 ```
 
 ### Generate new models.py (if needed)
-run from ims/ims
+* run from ims/ims
 ```
 python manage.py inspectdb > reports/models.py
 ```
 
 ### Run Django server and access report
-run from ims/ims
+* run from ims/ims
 ```
 python manage.py runserver
 ```
-In a web-browser, navigate to http://127.0.0.1:8000/reports/ by default to access the report
+* In a web-browser, navigate to http://127.0.0.1:8000/reports/sales_invoice_order_report/2722 by default to access the report (where 2722 is the sales order number)
 
 
 
