@@ -10994,6 +10994,15 @@ class Sord(models.Model):
     so_asnemai = models.TextField(blank=True, null=True)
     so_followu = models.DateField(blank=True, null=True)
 
+    def calculate_status(self):
+        status_dict = {
+            'C': 'Closed',
+        }
+
+        return status_dict[self.so_inv_sta]
+
+    status = property(calculate_status)
+
     class Meta:
         managed = False
         db_table = 'sord'
