@@ -31,11 +31,18 @@ sequel -m ./migrate postgres://ims:<password>@localhost/ims
 ruby bin/import_data.rb
 ```
 
-### Generate new models.py
+### Generate new models.py (if needed)
+run from ims/ims
 ```
 python manage.py inspectdb > reports/models.py
 ```
 
+### Run Django server and access report
+run from ims/ims
+```
+python manage.py runserver
+```
+In a web-browser, navigate to http://127.0.0.1:8000/reports/ by default to access the report
 
 
 
