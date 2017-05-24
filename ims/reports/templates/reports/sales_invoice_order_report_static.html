@@ -38,9 +38,9 @@
 
                 {% for invoice in invoices %}
                     {% if forloop.counter|divisibleby:2 %}
-                        <tr>
-                    {% else %}
                         <tr class="pure-table-odd">
+                    {% else %}
+                        <tr>
                     {% endif %}
                     <td id="so_number"></td>
                     <td id="so_date"></td>
