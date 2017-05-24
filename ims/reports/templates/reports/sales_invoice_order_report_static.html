@@ -11,10 +11,10 @@
                     <th>SO Date</th>
                     <th>Customer Code</th>
                     <th>Customer Name</th>
-                    <th>SO Total</th>
-                    <th>SO Balance</th>
                     <th>Status</th>
                     <th>Closed Date</th>
+                    <th>SO Total</th>
+                    <th>SO Balance</th>
                     <th>Invoice #</th>
                     <th>Invoice Date</th>
                     <th>Invoice Amount</th>
@@ -27,10 +27,10 @@
                     <td id="so_date">{{ sord.so_inv_dat }}</td>
                     <td id="customer_code">{{ sord.so_cust_co }}</td>
                     <td id="customer_name">{{ sord.so_comp_na }}</td>
-                    <td id="so_total">$ {{ sord.so_tot_amt }}</td>
-                    <td id="so_balance">$ {{ sord_balance|floatformat:2 }}</td>
                     <td id="status">{{ sord.status }}</td>
                     <td id="closed_date">{{ sord.so_closed_field }}</td>
+                    <td id="so_total">$ {{ sord.so_tot_amt|floatformat:2 }}</td>
+                    <td id="so_balance"></td>
                     <td id="invoice_number"></td>
                     <td id="invoice_date"></td>
                     <td id="invoice_amount"></td>
@@ -46,10 +46,14 @@
                     <td id="so_date"></td>
                     <td id="customer_code"></td>
                     <td id="customer_name"></td>
-                    <td id="so_total"></td>
-                    <td id="so_balance"></td>
                     <td id="status"></td>
                     <td id="closed_date"></td>
+                    <td id="so_total"></td>
+                    {% for key, value in invoice_totals.items %}
+                        {% if key == invoice.in_inv_num %}
+                            <td id="so_balance">$ {{ value|floatformat:2 }}</td>
+                        {% endif %}
+                    {% endfor %}
                     <td id="invoice_number">{{ invoice.in_inv_num }}</td>
                     <td id="invoice_date">{{ invoice.in_inv_dat }}</td>
                     <td id="invoice_amount">$ {{ invoice.in_tot_amt }}</td>
