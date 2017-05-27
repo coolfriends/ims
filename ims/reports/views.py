@@ -38,6 +38,8 @@ def sales_invoice_order_report_context(pk):
         invoice_total += invoice.in_tot_amt
         if invoice.in_tot_amt == sord_queryset.so_tot_amt:
             invoice_total_dict[invoice.in_inv_num] = 0
+        elif invoice.in_tot_amt > sord_queryset.so_tot_amt:
+            invoice_total_dict[invoice.in_inv_num] = sord_queryset.so_tot_amt - invoice.in_tot_amt
         else:
             invoice_total_dict[invoice.in_inv_num] = sord_queryset.so_tot_amt - invoice_total
 
@@ -70,6 +72,8 @@ def sales_invoice_order_report_detail(request, pk):
         invoice_total += invoice.in_tot_amt
         if invoice.in_tot_amt == sord_queryset.so_tot_amt:
             invoice_total_dict[invoice.in_inv_num] = 0
+        elif invoice.in_tot_amt > sord_queryset.so_tot_amt:
+            invoice_total_dict[invoice.in_inv_num] = sord_queryset.so_tot_amt - invoice.in_tot_amt
         else:
             invoice_total_dict[invoice.in_inv_num] = sord_queryset.so_tot_amt - invoice_total
 
