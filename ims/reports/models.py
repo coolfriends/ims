@@ -10996,7 +10996,8 @@ class Sord(models.Model):
 
     def calculate_status(self):
         status_dict = {
-            'C': 'Closed',
+            'O': 'Open',
+            'C': 'Closed'
         }
 
         return status_dict[self.so_inv_sta]
