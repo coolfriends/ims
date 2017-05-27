@@ -42,7 +42,7 @@ python manage.py inspectdb > reports/models.py
 ```
 python manage.py runserver
 ```
-* In a web-browser, navigate to http://127.0.0.1:8000/reports/sales_invoice_order_report/ and enter a sales order number in the provided form
+* In a web-browser, navigate to http://127.0.0.1:8000/reports/sales_invoice_order_report/ and enter a sales order number
 
 
 
