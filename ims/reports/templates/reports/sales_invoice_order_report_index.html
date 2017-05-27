@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+    </head>
+    <body>
+        <form class="pure-form" action="{% url 'sales-invoice-order-report-index' %}"  method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Submit" class="pure-button pure-button-primary"/>
+        </form>
+
+        <table class="pure-table">
+            <thead>
+                <tr>
+                    <th>SO Number</th>
+                    <th>SO Date</th>
+                    <th>Customer Code</th>
+                    <th>Customer Name</th>
+                    <th>Status</th>
+                    <th>Closed Date</th>
+                    <th>SO Total</th>
+                    <th>SO Balance</th>
+                    <th>Invoice #</th>
+                    <th>Invoice Date</th>
+                    <th>Invoice Amount</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr id="sord" class="pure-table-odd">
+                    <td id="so_number">{{ sord.so_sord_nu }}</td>
+                    <td id="so_date">{{ sord.so_inv_dat }}</td>
+                    <td id="customer_code">{{ sord.so_cust_co }}</td>
+                    <td id="customer_name">{{ sord.so_comp_na }}</td>
+                    <td id="status">{{ sord.status }}</td>
+                    <td id="closed_date">{{ sord.so_closed_field }}</td>
+                    <td id="so_total">$ {{ sord.so_tot_amt|floatformat:2 }}</td>
+                    <td id="so_balance"></td>
+                    <td id="invoice_number"></td>
+                    <td id="invoice_date"></td>
+                    <td id="invoice_amount"></td>
+                </tr>
+
+                {% for invoice in invoices %}
+                    {% if forloop.counter|divisibleby:2 %}
+                        <tr class="pure-table-odd">
+                    {% else %}
+                        <tr>
+                    {% endif %}
+                    <td id="so_number"></td>
+                    <td id="so_date"></td>
+                    <td id="customer_code"></td>
+                    <td id="customer_name"></td>
+                    <td id="status"></td>
+                    <td id="closed_date"></td>
+                    <td id="so_total"></td>
+                    {% for key, value in invoice_totals.items %}
+                        {% if key == invoice.in_inv_num %}
+                            <td id="so_balance">$ {{ value|floatformat:2 }}</td>
+                        {% endif %}
+                    {% endfor %}
+                    <td id="invoice_number">{{ invoice.in_inv_num }}</td>
+                    <td id="invoice_date">{{ invoice.in_inv_dat }}</td>
+                    <td id="invoice_amount">$ {{ invoice.in_tot_amt }}</td>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
