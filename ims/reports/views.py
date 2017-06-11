@@ -29,24 +29,35 @@ def sales_invoice_order_report_context(pk):
     """
     View for report that returns context dictionary
     """
-    sord_queryset = Sord.objects.get(so_sord_nu=pk)
-    invoice_queryset = Invoice.objects.filter(in_sord_nu=pk).order_by("in_inv_dat")
+    sord_queryset = None
+    invoice_queryset = None
+    sord_balance = None
     invoice_total_dict = {}
 
-    invoice_total = 0
-    for invoice in invoice_queryset:
-        invoice_total += invoice.in_tot_amt
-        if invoice.in_tot_amt == sord_queryset.so_tot_amt:
-            invoice_total_dict[invoice.in_inv_num] = 0
-        elif invoice.in_tot_amt > sord_queryset.so_tot_amt:
-            invoice_total_dict[invoice.in_inv_num] = sord_queryset.so_tot_amt - invoice.in_tot_amt
-        else:
-            invoice_total_dict[invoice.in_inv_num] = sord_queryset.so_tot_amt - invoice_total
+    try:
+        sord_queryset = Sord.objects.get(so_sord_nu=pk)
+        invoice_queryset = Invoice.objects.filter(in_sord_nu=pk).order_by("in_inv_dat")
+        invoice_total_dict = {}
 
-    sord_balance = sord_queryset.so_tot_amt - invoice_total
-    for invoice in invoice_queryset:
-        if invoice.in_tot_amt == sord_queryset.so_tot_amt:
-            sord_balance = 0
+        invoice_total = 0
+        sord_balance = 0
+
+        for invoice in invoice_queryset:
+            invoice_total += invoice.in_tot_amt
+            if invoice.in_tot_amt == sord_queryset.so_tot_amt:
+                invoice_total_dict[invoice.in_inv_num] = 0
+            elif invoice.in_tot_amt > sord_queryset.so_tot_amt:
+                invoice_total_dict[invoice.in_inv_num] = sord_queryset.so_tot_amt - invoice.in_tot_amt
+            else:
+                invoice_total_dict[invoice.in_inv_num] = sord_queryset.so_tot_amt - invoice_total
+
+            sord_balance = sord_queryset.so_tot_amt - invoice_total
+            for invoice in invoice_queryset:
+                if invoice.in_tot_amt == sord_queryset.so_tot_amt:
+                    sord_balance = 0
+
+    except Sord.DoesNotExist:
+        sord_queryset = "bad_query"
 
     return {
         'sord': sord_queryset,

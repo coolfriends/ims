@@ -9,6 +9,9 @@
             {% csrf_token %}
             {{ form }}
             <input type="submit" value="Submit" class="pure-button pure-button-primary"/>
+            {% if sord == 'bad_query' %}
+                <span style="color: red;"> Invalid Sales Order Number - Please try again </span>
+            {% endif %}
         </form>
 
         <table class="pure-table">
@@ -58,7 +61,11 @@
                     <td id="so_total"></td>
                     {% for key, value in invoice_totals.items %}
                         {% if key == invoice.in_inv_num %}
-                            <td id="so_balance">$ {{ value|floatformat:2 }}</td>
+                            {% if value < 0 %}
+                                <td id="so_balance">$ - ({{ value|floatformat:2|slice:"1:" }})</td>
+                            {% else %}
+                                <td id="so_balance">$ {{ value|floatformat:2 }}</td>
+                            {% endif %}
                         {% endif %}
                     {% endfor %}
                     <td id="invoice_number">{{ invoice.in_inv_num }}</td>
