@@ -5,4 +5,4 @@ require 'sequel'
 environment = ENV['IMS_ENV'] || 'test'
 config = JSON.parse(File.read("config/ims-#{environment}.json"),
                     symbolize_names: true)
-DB = Sequel.postgres('ims', user: 'ims', password: config[:db_pass])
+DB = Sequel.connect("postgres://ims:#{config[:db_pass]}@localhost/ims")

@@ -3,6 +3,13 @@
 
 require 'dbf'
 require 'pry'
+
+# Remove migrate dir if it exists, then create empty migrate dir
+directory = 'migrate'
+FileUtils.remove_dir directory if File.directory? directory
+Dir.mkdir directory
+
+# Make migrations happen
 count = 1
 Dir['data/*.dbf'].each do |table|
   migration = File.join('migrate', format('%03d', count))
