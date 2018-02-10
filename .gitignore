@@ -2,6 +2,7 @@ config/test.json
 data/
 db/
 migrate/
+venv/
 Gemfile.lock
 __pycache__/
 *.py[cod]
