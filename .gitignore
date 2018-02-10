@@ -1,6 +1,7 @@
 config/test.json
 data/
 db/
+migrate/
 Gemfile.lock
 __pycache__/
 *.py[cod]
