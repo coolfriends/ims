@@ -5,7 +5,7 @@
     </head>
 
     <body>
-        <form class="pure-form" action="{% url 'sales-invoice-order-report-index' %}"  method="post">
+        <form class="pure-form" action="{% url 'range-sales-invoice-order-report-index' %}"  method="post">
             {% csrf_token %}
             {{ form }}
             <input type="submit" value="Submit" class="pure-button pure-button-primary"/>
@@ -33,7 +33,9 @@
 
             <tbody>
             <!-- insert macro for multiple sales order reports here -->
-              {% include 'reports/snippets/so_report_macro.html' with invoices=invoices sord=sord invoice_totals=invoice_totals %}
+              {% for sord_context in sords %}
+                {% include 'reports/snippets/so_report_macro.html' with invoices=sord_context.invoices sord=sord_context.sord invoice_totals=sord_context.invoice_totals %}
+              {% endfor %}
             </tbody>
 
         </table>

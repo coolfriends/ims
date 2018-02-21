@@ -15,11 +15,16 @@ Including another URLconf
 """
 from django.conf.urls import url
 from .views import sales_invoice_order_report_index
-from .views import sales_invoice_order_report_detail
+from .views import range_sales_invoice_order_report_index
 
 urlpatterns = [
-    url(r'^sales_invoice_order_report/$', sales_invoice_order_report_index,
-        name='sales-invoice-order-report-index'),
-    url(r'^sales_invoice_order_report/(?P<pk>[0-9]+)',
-        sales_invoice_order_report_detail)
+    url(r'^sales_invoice_order_report/$',
+        sales_invoice_order_report_index,
+        name='sales-invoice-order-report-index'
+    ),
+
+    url(r'^range_sales_invoice_order_report/$',
+        range_sales_invoice_order_report_index,
+        name='range-sales-invoice-order-report-index'
+    ),
 ]
