@@ -6,3 +6,6 @@ venv/
 Gemfile.lock
 __pycache__/
 *.py[cod]
+
+# ignore json files generated for debugging
+data-*.json

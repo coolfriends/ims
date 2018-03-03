@@ -9,6 +9,9 @@ from __future__ import unicode_literals
 
 from django.db import models
 
+import datetime
+import json
+
 
 class Ac1099(models.Model):
     sc_id = models.CharField(max_length=10, blank=True, null=True)
@@ -5033,7 +5036,35 @@ class InventT(models.Model):
 
 
 class Inventor(models.Model):
-    iv_invent_field = models.CharField(db_column='iv_invent_', max_length=30, blank=True, null=True)  # Field renamed because it ended with '_'.
+    def __iter__(self):
+        for field in self._meta.get_fields():
+            value = getattr(self, field.name, None)
+            yield (field.name, value)
+
+    @staticmethod
+    def _datetime_converter(o):
+        if isinstance(o, datetime.datetime):
+            return o.__str__()
+
+    def _to_json(self):
+        inventor_dict = {field: val for field, val in self}
+        result_json = json.dumps(inventor_dict, indent=2, default=self._datetime_converter)
+
+        return result_json
+
+    def _to_json_file(self):
+        filename = "data-{}.json".format(self.iv_invent_field)
+        with open(filename, "w") as f:
+            inventor_dict = {field: val for field, val in self}
+            json.dump(inventor_dict, f, indent=2, default=self._datetime_converter)
+
+    iv_invent_field = models.CharField(
+        db_column='iv_invent_',
+        max_length=30,
+        blank=True,
+        null=True,
+        primary_key=True
+        )  # Field renamed because it ended with '_'.
     iv_invent2 = models.CharField(max_length=50, blank=True, null=True)
     iv_invent3 = models.CharField(max_length=5, blank=True, null=True)
     iv_heat_la = models.IntegerField(blank=True, null=True)
@@ -6686,7 +6717,12 @@ class Ordcosts(models.Model):
 
 
 class Order(models.Model):
-    or_order_n = models.CharField(max_length=12, blank=True, null=True)
+    or_order_n = models.CharField(
+        max_length=12,
+        blank=True,
+        null=True,
+        primary_key=True
+    )
     or_ord_dat = models.DateField(blank=True, null=True)
     or_quote_n = models.CharField(max_length=15, blank=True, null=True)
     or_unit_ty = models.CharField(max_length=4, blank=True, null=True)

@@ -1,3 +1,4 @@
+{% load humanize %}
 <tr id="sord" class="pure-table-odd">
   <td id="so_number">{{ sord.so_sord_nu }}</td>
   <td id="so_date">{{ sord.so_inv_dat }}</td>
@@ -5,7 +6,7 @@
   <td id="customer_name">{{ sord.so_comp_na }}</td>
   <td id="status">{{ sord.status }}</td>
   <td id="closed_date">{{ sord.so_closed_field }}</td>
-  <td id="so_total">$ {{ sord.so_tot_amt|floatformat:2 }}</td>
+  <td id="so_total">$ {{ sord.so_tot_amt|floatformat:2|intcomma }}</td>
   <td id="so_balance"></td>
   <td id="invoice_number"></td>
   <td id="invoice_date"></td>
@@ -28,13 +29,13 @@
   {% for key, value in invoice_totals.items %}
     {% if key == invoice.in_inv_num %}
       {% if value < 0 %}
-        <td id="so_balance">$ - ({{ value|floatformat:2|slice:"1:" }})</td>
+        <td id="so_balance">$ - ({{ value|floatformat:2|slice:"1:"|intcomma }})</td>
       {% else %}
-        <td id="so_balance">$ {{ value|floatformat:2 }}</td>
+        <td id="so_balance">$ {{ value|floatformat:2|intcomma }}</td>
       {% endif %}
     {% endif %}
   {% endfor %}
   <td id="invoice_number">{{ invoice.in_inv_num }}</td>
   <td id="invoice_date">{{ invoice.in_inv_dat }}</td>
-  <td id="invoice_amount">$ {{ invoice.in_tot_amt }}</td>
+  <td id="invoice_amount">$ {{ invoice.in_tot_amt|floatformat:2|intcomma }}</td>
 {% endfor %}
