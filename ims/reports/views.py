@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Sord, Invoice
+from .models import Sord, Invoice, Inventor
 from .forms import SalesInvoiceOrderReportForm
 from .forms import RangeSalesInvoiceOrderReportForm
 
@@ -46,6 +46,17 @@ def range_sales_invoice_order_report_index(request):
         form = RangeSalesInvoiceOrderReportForm
 
     context['form'] = form
+
+    return render(request, template_name, context=context)
+
+
+def make_buy_report_index(request):
+    """
+    Form view that takes Sales Order number and redirects to
+    report template
+    """
+    template_name = "reports/make_buy_report_index.html"
+    context = make_buy_report_context()
 
     return render(request, template_name, context=context)
 
@@ -101,4 +112,12 @@ def range_sales_invoice_order_report_context(start, end):
 
     return {
         'sords': context_list,
+    }
+
+
+def make_buy_report_context():
+    inventor_queryset = Inventor.objects.all()
+
+    return {
+        'inventors': inventor_queryset,
     }

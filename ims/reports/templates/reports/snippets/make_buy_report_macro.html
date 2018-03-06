@@ -1,0 +1,25 @@
+{% for inventor in inventors %}
+<tr>
+  <!-- make/buy -->
+  <td id="iv_make_bu">{{ inventor.iv_make_bu }}</td>
+  <!-- inventory number -->
+  <td id="iv_invent_field">{{ inventor.iv_invent_field }}</td>
+  <!-- description -->
+  <td id="iv_invent2">{{ inventor.iv_invent2 }}</td>
+  <!-- uom (two fields) -->
+  <td id="iv_q_type">{{ inventor.iv_q_type }}</td>
+  <td id="iv_q_type1">{{ inventor.iv_q_type1 }}</td>
+  <!-- on hand -->
+  <td id="iv_quantit">{{ inventor.iv_quantit }}</td>
+  <!-- allocated -->
+  <td id="iv_alloc_q">{{ inventor.iv_alloc_q }}</td>
+  <!-- available -->
+  <td id="iv_qty_rec">{{ inventor.iv_qty_rec }}</td>
+  <!-- po# to buy -->
+  <td id="iv_qty_rec">{{ inventor.iv_qty_rec }}</td>
+  <!-- buy quantity -->
+  <td id="iv_qty_rec">{{ inventor.iv_qty_rec }}</td>
+  <!-- so as allocated -->
+  <td id="iv_qty_rec">{{ inventor.iv_qty_rec }}</td>
+</tr>
+{% endfor %}

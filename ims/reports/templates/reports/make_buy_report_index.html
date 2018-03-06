@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    </head>
+
+    <body>
+        <table id="make-buy-report" class="display dataTable" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th class="sorting">Make/Buy</th>
+                    <th>Inventory #</th>
+                    <th>Description</th>
+                    <th>UOM</th>
+                    <th>On Hand</th>
+                    <th>Allocated</th>
+                    <th>Available</th>
+                    <th>PO# to Buy</th>
+                    <th>Buy Quantity</th>
+                    <th>SO as Allocated</th>
+                    <th>Qty as Allocated</th>
+                </tr>
+            </thead>
+            <tbody>
+            <!-- insert macro for make buy order reports here -->
+              {% include 'reports/snippets/make_buy_report_macro.html' with inventors=inventors %}
+            </tbody>
+
+        </table>
+
+
+        <script>
+          $(document).ready(function() {
+            $('#make-buy-report').DataTable();
+          });
+        </script>
+
+    </body>
+</html>

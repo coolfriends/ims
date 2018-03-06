@@ -5062,7 +5062,7 @@ class Inventor(models.Model):
         db_column='iv_invent_',
         max_length=30,
         blank=True,
-        null=True,
+        null=False,
         primary_key=True
         )  # Field renamed because it ended with '_'.
     iv_invent2 = models.CharField(max_length=50, blank=True, null=True)
@@ -6720,7 +6720,7 @@ class Order(models.Model):
     or_order_n = models.CharField(
         max_length=12,
         blank=True,
-        null=True,
+        null=False,
         primary_key=True
     )
     or_ord_dat = models.DateField(blank=True, null=True)

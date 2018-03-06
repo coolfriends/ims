@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls import url
 from .views import sales_invoice_order_report_index
 from .views import range_sales_invoice_order_report_index
+from .views import make_buy_report_index
+
 
 urlpatterns = [
     url(r'^sales_invoice_order_report/$',
@@ -26,5 +28,10 @@ urlpatterns = [
     url(r'^range_sales_invoice_order_report/$',
         range_sales_invoice_order_report_index,
         name='range-sales-invoice-order-report-index'
+    ),
+
+    url(r'^make_buy_report/$',
+        make_buy_report_index,
+        name='make-buy-report-index'
     ),
 ]
